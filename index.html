@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="nb-no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>En Enkel Fiskeside</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  
+  <!--<link rel="stylesheet" href="bootstrap.min.css" />-->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/filters.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/icons.css">
+    <link rel="stylesheet" href="./css/bilder.css">
+    
+  </head>
+  
+  <body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">En enkel fiskeside</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#hjem">Hjem</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Om meg</a></li>
+          <li class="nav-item"><a class="nav-link" href="#utstyr">Utstyr</a></li>
+          <li class="nav-item"><a class="nav-link" href="#favorittfisk">Favoritt Fisk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bilder">Bilder</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontaktmeg">Kontakt meg</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div data-spy="scroll" data-target="#navbar" data-offset="0">
+        <header id="hjem">
+          <div class="container-fluid header-content">
+            <div class="row">
+              <div class="col">
+                <div class="content-box text-center text-light">
+                  <h1>Velkommen</h1>
+                  <h2><span class="aboutMe"></span></h2>   
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        
+        <section class="about" id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <img id="bildeAvMeg" src="./img/bildeAvMeg.jpg" class="img-fluid border-0 rounded-pill" alt="Profile Picture">
+              </div>
+              <div class="col-lg-6 mt-5 mt-lg-0">
+                <h2 id="omMeg">Om meg</h2>
+    
+                <h3>Hei! <br>
+                  <span id="anders">Jeg heter Anders Erichsen og er en ivrig sportsfisker.</span></h3>
+                  <p>Er en stangfisker som liker å fiske i saltvann og ferskvann, helst fra land. I saltvann er jeg alltid på jakt etter ørret, i ferskvann også ørret eller røye <i class="bi bi-emoji-smile pe-2"></i></p>
+                  <p>Veldig gøy å fiske med mark og dupp sammen med barna mine, blir ikke store fiskene. Men gleden er stor når mine barn får sin egen fisk på kroken.</p>
+                  
+                  
+                  <div id="ørret"><img src="./img/Ørret.jpg" style="width: 500px;" alt="ørret"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br>
+        <section id="utstyr">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col mb-5 ">
+                <div class="col">
+                  <h2>Noe av utstyret jeg bruker</h2>
+                  <p>Her er noe av utstyret jeg bruker å ha meg med på tur <i class="bi bi-emoji-smile"></i> </p>
+                </div>
+              </div>
+              <div class="row">
+                <table class="table table-bordered" id="personalTable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nummer</th>
+                      <th scope="col">Navn</th>
+                      <th scope="col">Beskrivelse</th>
+                      <th scope="col">Info</th>
+                      <th scope="col">Bilde</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody">
+                    <tr>
+                    <td>1</td>
+                    <td>Fiskestang</td>
+                    <td>En god stang er ett viktig verktøy</td>
+                    <td>Shimano Speedmaster BX</td>
+                    <td><img id="stang" src="./img/speedmaster.jpg" alt="fiskestang" width="40px" data-bs-toggle="tooltip" title="Klikk for å se ett større bilde"></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Snelle</td>
+                    <td>En god snelle som en er komfortabel med</td>
+                    <td>Shimano Exage 4000FD</td>
+                    <td><img id="snelle" src="./img/Snelle.jpg" alt="snelle" width="40px" data-bs-toggle="tooltip" title="Klikk for å se ett større bilde"></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Sene</td>
+                    <td>En god sene som er lett og sterk. Jeg liker Fireline <i class="bi bi-fire"></i> </td>
+                    <td>Fireline .25mm smoke</td>
+                    <td><img id="sene" src="./img/fireline.jpg" alt="sene" width="40px" data-bs-toggle="tooltip" title="Klikk for å se ett større bilde"></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Saltvann</td>
+                    <td>Mye sluker i forskjellige farger og størrelser. En kommer til å sette seg fast <i class="bi bi-emoji-wink"></i></td>
+                    <td>Sluker</td>
+                    <td><img id="salt" src="./img/saltvann.jpg" alt="saltvann" width="40px" data-bs-toggle="tooltip" title="Klikk for å se ett større bilde"></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Ferskvann</td>
+                    <td>Enda flere sluker og kanskje en dupp for sikkerhetsskyld!</td>
+                    <td>Sluker</td>
+                    <td><img id="fersk" src="./img/ferskvann.jpg" alt="ferskvann" width="40px" data-bs-toggle="tooltip" title="Klikk for å se ett større bilde"></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+        </section>
+
+        <section id="favorittfisk">
+          <div class="p-5 text-center">
+            <h2>Fisk som er tatt bilde av</h2>
+            <p class="mb-5">Dette er noen av fiskene som er fanget på stang fra båt og land</p>
+            <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="rounded-circle shadow-1-strong mb-1" src="./img/Torsk.jpg" alt="torsk" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Torsk</h5>
+                      
+                      <p class="text-muted">
+                        <i class="bi bi-water pe-2"></i>
+                        Torsk fanget på stang, fra båt i Trondheimsfjorden
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/Makrell.jpg" alt="makrell" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Makrell</h5>
+                      
+                      <p class="text-muted">
+                        <i class="bi bi-water pe-2"></i>
+                        En liten makrell fanget fra Gullberget i Trondheimsfjorden. Brukt en stingsild 18g blå/grønn og sølv.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/Sei.jpg" alt="sei" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Sei</h5>
+                      
+                      <p class="text-muted">
+                        <i class="bi bi-water pe-2"></i>
+                        En veldig liten sei fanget fra land. Bet på stingsild 12g blå med svarte prikker, rosa underdel og sølv.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/Barracuda.jpg" alt="barracuda" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Barracuda</h5>
+                      
+                      <p class="text-muted">
+                        <i class="bi bi-water pe-2"></i>
+                        Barracuda og en ukjent dyphavsfisk tatt på stang, fra båt utenfor Koh Chang.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/mort.jpg" alt="mort" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Mort</h5>
+                      
+                      <p class="text-muted">
+                        <i class="fa-solid fa-fish-fins fa-spin pe-2"></i>
+                        En fin mort tatt med dupp og mark. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/Gjedde.jpg" alt="gjedde" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Gjedde</h5>
+                      
+                      <p class="text-muted">
+                        <i class="fa-solid fa-fish-fins fa-spin pe-2"></i>
+                        En ung gjedde som angrep sluken som svømte langs med sivet. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/Knorr.jpg" alt="knorr" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Knorr</h5>
+                      
+                      <p class="text-muted">
+                        <i class="bi bi-water pe-2"></i>
+                        En liten knorr som biter på hva som helst av sluk!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded-circle shadow-1-strong mb-4" src="./img/Tunfisk.jpg" alt="tunfisk" style="width: 400px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Tunfisk</h5>
+                      
+                      <p class="text-muted">
+                        <i class="bi bi-water pe-2"></i>
+                        Tunfisk fisket fra båt utenfor Phuket. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+        </section>
+        <section id="bilder">
+          <div class="p-5 text-center">
+            <h2>Steder som jeg har fisket</h2>
+            <p class="mb-5">Her er det noen bilder av steder jeg har fisket og hatt gode opplevelser fra <i class="bi bi-emoji-sunglasses"></i></p>
+            <div id="carouselExampleControls1" class="container carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="rounded shadow-1-strong mb-1" src="./img/GruntVann.jpg" alt="gruntvann" style="width: 500px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Homburgsund</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded shadow-1-strong mb-4" src="./img/Torshavn.jpg" alt="torshavn" style="width: 500px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Torshavn</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded shadow-1-strong mb-4" src="./img/KohKood.jpg" alt="kohkood" style="width: 500px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Koh Kood</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded shadow-1-strong mb-4" src="./img/Slegga.jpg" alt="slegga" style="width: 500px;" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Slegga, Trondheimsfjorden</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded shadow-1-strong mb-4" src="./img/KohSamui.jpg" alt="kohsamui" style="width: 500px;" height="400px"/>
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Koh Samui (Gir meg ikke med å fiske bare fordi det blåser litt) <i class="bi bi-tornado"></i></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded shadow-1-strong mb-4" src="./img/Tørbergsjøen.jpg" alt="tørbergsjøen" style="width: 500px" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Tørbergsjøen, Trysil</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded shadow-1-strong mb-4" src="./img/Ørsjøen.jpg" alt="ørsjøen" style="width: 500px" />
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                      <h5 class="mb-3">Ørsjøen, Trysil</h5>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="video">
+          <div class="p-5 text-center">
+            <h2>Video fra steder jeg har fisket</h2>
+            <div class="container">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                  <video id="video-spiller" width="640" height="360" controls>
+                    <source src="./video/oven.mp4" type="video/mp4" />
+                  </video>
+                  <h5 class="mb-3"></h5>
+                  <button id="forrige-video" class="btn btn-primary" data-bs-toggle="tooltip" title="Forrige video">
+                    <i class="bi bi-arrow-left-square"></i>
+                  </button>
+                  <button id="neste-video" class="btn btn-primary" data-bs-toggle="tooltip" title="Neste video">
+                    <i class="bi bi-arrow-right-square"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+
+        <section id="kontaktmeg">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <h2>Kom i kontakt med meg</h2>
+                <p>Det blir ikke så lett, men du kan gjerne prøve</p>
+                
+              </div>
+            </div>
+            <div id="contactDetails" class="row mt-5">
+              <div class="col-md-4">
+                <div class="r-icon"> <i class="bi bi-phone"></i></div>
+                <div class="text-center">
+                  <h5>Ringe meg</h5>
+                  <p class="text-muted">Har ikke telefon!</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="r-icon"> <i class="bi bi-envelope-at"></i></div>
+                <div class="text-center">
+                  <h5>Email</h5>
+                  <p class="text-muted">Nei takk</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="r-icon"> <i class="bi bi-house-door"></i></div>
+                <div class="text-center">
+                  <h5>Besøk meg</h5>
+                  <p class="text-muted">Parker ett sted langs Oslofjorden og begynn å gå... Til slutt ser du meg <i class="bi bi-emoji-sunglasses text-success"></i> </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <h3>Hjelpemidler</h3>
+                <div class="col-5">
+                  <p>Hvis du synes at teksten blir litt liten, trykk på Av knappen. Da blir det større tekst på siden.</p>
+                </div>
+                <div class="col-5 text-end">
+                  <div class="checkbox">
+                    <label><input id="accessToggle" type="checkbox" data-toggle="toggle" data-offstyle="secondary" data-on="På" data-off="Av">Større skrift</label>
+                  </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col">
+                <div class="r-icon text-center mt-3">
+                  <ul>
+                    <li class="list-inline-item"><a href="https://www.youtube.com/results?search_query=fiske" target="_blank" rel="noopener" ><i class="bi bi-youtube" data-bs-toggle="tooltip" title="Videoer med fisking!"></i></a></li>
+                    <li class="list-inline-item" data-bs-toggle="tooltip" title="Tekstvarsel kyst"><a id="yr" href="https://www.met.no/vaer-og-klima/tekstvarsel-for-kysten" target="_blank" rel="noopener" >
+                      <img src="./img/icon-logo-yr.png" alt="yr-logo" style="padding-bottom: 15%;"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <iframe src="https://www.yr.no/nb/innhold/1-47109/table.html" title="Været for Sperrebotn" width="100%" height="550"></iframe>
+        </section>
+
+        <Footer>
+          <img id="foot" src="./img/kohrok7.jpg" alt="små fisk på grunt vann">
+        </Footer>
+        
+                   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <script src="./js/tabell.js"></script>
+        <script src="./js/typed.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/sweetalert2@11.js"></script>
+        <script src="./js/filters.js"></script>
+        <script src="./js/videospiller.js"></script>
+  </body>
+</html>
