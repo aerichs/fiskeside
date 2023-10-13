@@ -1,0 +1,14 @@
+#forrige-video {
+  box-shadow: 2px 2px #999;
+}
+#neste-video {
+  box-shadow: 2px 2px #999;
+}
+#forrige-video:active {
+  transform: translateY(4px);
+  box-shadow: 1px 1px #666;
+}
+#neste-video:active {
+  transform: translateY(4px);
+  box-shadow: 1px 1px #666;
+}
